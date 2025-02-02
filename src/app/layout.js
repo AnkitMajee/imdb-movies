@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/Header"; 
+import DarkTheme from "@/components/DarkTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,13 +20,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><div className="bg-gray-800">
-        <Header />
+    <html lang="en" suppressHydrationWarning>
+      <body>
+      {/* DarkTheme component is used to wrap the application with a dark theme */}
+      <DarkTheme>
+      <div className="bg-gray-800">
+      <Header />
       </div>
         {children}
+      </DarkTheme>
       </body>
     </html>
   );

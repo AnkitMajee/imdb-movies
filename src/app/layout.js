@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header"; 
 import DarkTheme from "@/components/DarkTheme";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
       <body>
       {/* DarkTheme component is used to wrap the application with a dark theme */}
@@ -31,5 +33,6 @@ export default function RootLayout({ children }) {
       </DarkTheme>
       </body>
     </html>
+    </ClerkProvider>
   );
 }

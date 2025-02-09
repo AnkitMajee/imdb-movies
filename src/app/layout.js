@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body>
       {/* DarkTheme component is used to wrap the application with a dark theme */}
       <DarkTheme>
-      <div className="bg-gray-800">
+      <div>
       <Header />
       </div>
         {children}

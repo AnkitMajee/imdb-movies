@@ -19,6 +19,9 @@ export default function Header() {
         <li className='hidden sm:block hover:text-lime-500'>
           <Link href="/about">About</Link>
         </li>
+        <li className='hidden sm:block hover:text-lime-500'>
+          <Link href="/favorites">Favorites</Link>
+        </li>
       </ul>
       <div className='flex gap-4 items-center py-2 px-4'>
         {/* <DarkSwitch /> */}

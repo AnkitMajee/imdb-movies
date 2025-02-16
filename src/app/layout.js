@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import DarkTheme from "@/components/DarkTheme";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/Navbar";
+import SearchBox from "@/components/SearchBox";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <div>
       <Header />
       <Navbar />
+      <SearchBox />
       </div>
         {children}
       </DarkTheme>
